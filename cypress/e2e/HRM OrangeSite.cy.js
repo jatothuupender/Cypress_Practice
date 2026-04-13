@@ -1,4 +1,4 @@
-
+/// <reference types="cypress" />
 
 describe('New Site', () => {
 
@@ -7,10 +7,10 @@ describe('New Site', () => {
     cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
 
     // Username
-    cy.get('#username').type('Admin')
+    cy.get('input[name="username"]').type('Admin')
 
     // Password
-    cy.get('password').type('admin123')
+    cy.get('input[name="password"]').type('admin123')
 
     // Login button
     cy.get('button[type="submit"]').click()
